@@ -30,6 +30,8 @@ class ViewController: UIViewController {
 		notificationCenter.addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: app)
 		notificationCenter.addObserver(self, selector: "applicationWillResignActive:", name: UIApplicationWillResignActiveNotification, object: app)
 		notificationCenter.addObserver(self, selector: "applicationWillTerminate:", name: UIApplicationWillTerminateNotification, object: app)
+        
+        segmentedControl.addTarget(self, action: "setColorKey:", forControlEvents: .ValueChanged)
 		
 		person.loadDataFromUserDefaults()
 		
@@ -40,6 +42,10 @@ class ViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+    
+    func setColorKey() {
+        person.segmentKeyString = segmentedControl.selectedSegmentIndex.description
+    }
 	
 //	let personObject: AnyObject = pListArray.objectAtIndex(0).objectAtIndex(0) 
 	//	var pListPerson = Person(firstName: personObject["firstName"] as String, lastName: personObject["lastName"] as String)
@@ -49,7 +55,19 @@ class ViewController: UIViewController {
 		numberTextField.text = "\(person.numberFloat)"
 		stepper.value = Double(person.stepperInteger)
 		viewSwitch.on = person.switchBool
-		segmentedControl.selectedSegmentIndex = 
+//        switch (person.segmentKeyString) {
+//            case "red":
+//                segmentedControl.selectedSegmentIndex = 0
+//                break
+//            case "orange":
+//                segmentedControl.selectedSegmentIndex = 1
+//                break
+//            case "yellow":
+//                segmentedControl.selectedSegmentIndex = 2
+//                break
+//        default:
+//            segmentedControl.selectedSegmentIndex = 0
+//        }
 	}
 	
 	func updateModelData() {

@@ -49,7 +49,7 @@ static NSString *kSegmentColorKey = @"IADSegmentColor";
     self.stepperInteger = [self.userDefaults integerForKey:kUserStepperKey];
     self.switchBool = [self.userDefaults boolForKey:kUserSwitchKey];
 	self.segmentString = [self.userDefaults stringForKey:kSegmentColorKey];
-	NSArray *segmentArray = [self.userDefaults objectForKey:kSegmentColorKey];
+    NSLog(@"key: %@", self.segmentString);
 }
 
 @end
