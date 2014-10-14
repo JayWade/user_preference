@@ -18,6 +18,7 @@ class ViewController: UIViewController {
 	@IBOutlet weak var stepper: UIStepper!
 	@IBOutlet weak var viewSwitch: UISwitch!
 	@IBOutlet weak var segmentedControl: UISegmentedControl!
+	@IBOutlet weak var progressView: UIProgressView!
 	
 	@IBAction func doneEditing(sender: AnyObject) {
 		sender.resignFirstResponder()
@@ -44,24 +45,30 @@ class ViewController: UIViewController {
 	}
     
 	func setColorKey() {
+		progressView.setProgress(100, animated: false)
 		switch (segmentedControl.selectedSegmentIndex) {
 		case 0:
 			person.segmentString = "red"
+			segmentedControl.tintColor = UIColor.redColor()
+			progressView.progressTintColor = UIColor.redColor()
 			break
 		case 1:
 			person.segmentString = "orange"
+			segmentedControl.tintColor = UIColor.orangeColor()
+			progressView.progressTintColor = UIColor.orangeColor()
 			break
 		case 2:
 			person.segmentString = "yellow"
+			segmentedControl.tintColor = UIColor.yellowColor()
+			progressView.progressTintColor = UIColor.yellowColor()
 			break
 		default:
 			person.segmentString = "red"
+			segmentedControl.tintColor = UIColor.redColor()
+			progressView.progressTintColor = UIColor.redColor()
 			break
 		}
     }
-	
-//	let personObject: AnyObject = pListArray.objectAtIndex(0).objectAtIndex(0) 
-	//	var pListPerson = Person(firstName: personObject["firstName"] as String, lastName: personObject["lastName"] as String)
 
 	func displayModelData() {
 		nameText.text = person.nameString
@@ -82,6 +89,7 @@ class ViewController: UIViewController {
         default:
             segmentedControl.selectedSegmentIndex = 0
         }
+		setColorKey()
 	}
 	
 	func updateModelData() {
@@ -89,7 +97,7 @@ class ViewController: UIViewController {
 		person.numberFloat = (numberTextField.text as NSString).floatValue
 		person.stepperInteger = Int(stepper.stepValue)
 		person.switchBool = viewSwitch.on
-		//person.segmentString = segmentedControl.selectedSegmentIndex.description
+		setColorKey()
 	}
 	
 	func applicationWillEnterForeground(notification : NSNotification) {

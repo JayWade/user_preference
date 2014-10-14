@@ -76,6 +76,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rmf-rR-AnO">
+                                <rect key="frame" x="16" y="346" width="343" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -83,6 +86,7 @@
                     <connections>
                         <outlet property="nameText" destination="O89-Sq-w4b" id="Bhv-Bm-xKy"/>
                         <outlet property="numberTextField" destination="IIv-WO-Zj6" id="Hi8-LI-eSf"/>
+                        <outlet property="progressView" destination="rmf-rR-AnO" id="XzW-z0-7zc"/>
                         <outlet property="segmentedControl" destination="RAe-X6-hGV" id="1nh-AO-Mn2"/>
                         <outlet property="stepper" destination="VyC-FR-atO" id="PWw-dq-tIs"/>
                         <outlet property="viewSwitch" destination="9lE-1w-HQ8" id="qml-Mv-uhr"/>
