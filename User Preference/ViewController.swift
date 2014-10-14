@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 		notificationCenter.addObserver(self, selector: "applicationWillResignActive:", name: UIApplicationWillResignActiveNotification, object: app)
 		notificationCenter.addObserver(self, selector: "applicationWillTerminate:", name: UIApplicationWillTerminateNotification, object: app)
         
-        segmentedControl.addTarget(self, action: "setColorKey:", forControlEvents: .ValueChanged)
+        segmentedControl.addTarget(self, action: "setColorKey", forControlEvents: .ValueChanged)
 		
 		person.loadDataFromUserDefaults()
 		
@@ -43,8 +43,21 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
     
-    func setColorKey() {
-        person.segmentKeyString = segmentedControl.selectedSegmentIndex.description
+	func setColorKey() {
+		switch (segmentedControl.selectedSegmentIndex) {
+		case 0:
+			person.segmentString = "red"
+			break
+		case 1:
+			person.segmentString = "orange"
+			break
+		case 2:
+			person.segmentString = "yellow"
+			break
+		default:
+			person.segmentString = "red"
+			break
+		}
     }
 	
 //	let personObject: AnyObject = pListArray.objectAtIndex(0).objectAtIndex(0) 
@@ -55,19 +68,20 @@ class ViewController: UIViewController {
 		numberTextField.text = "\(person.numberFloat)"
 		stepper.value = Double(person.stepperInteger)
 		viewSwitch.on = person.switchBool
-//        switch (person.segmentKeyString) {
-//            case "red":
-//                segmentedControl.selectedSegmentIndex = 0
-//                break
-//            case "orange":
-//                segmentedControl.selectedSegmentIndex = 1
-//                break
-//            case "yellow":
-//                segmentedControl.selectedSegmentIndex = 2
-//                break
-//        default:
-//            segmentedControl.selectedSegmentIndex = 0
-//        }
+		println("segmentKeyString: ", "\(person.segmentString)")
+        switch (person.segmentString) {
+            case "red":
+                segmentedControl.selectedSegmentIndex = 0
+                break
+            case "orange":
+                segmentedControl.selectedSegmentIndex = 1
+                break
+            case "yellow":
+                segmentedControl.selectedSegmentIndex = 2
+                break
+        default:
+            segmentedControl.selectedSegmentIndex = 0
+        }
 	}
 	
 	func updateModelData() {
@@ -75,7 +89,7 @@ class ViewController: UIViewController {
 		person.numberFloat = (numberTextField.text as NSString).floatValue
 		person.stepperInteger = Int(stepper.stepValue)
 		person.switchBool = viewSwitch.on
-		person.segmentKeyString = segmentedControl.titleForSegmentAtIndex(segmentedControl.selectedSegmentIndex)
+		//person.segmentString = segmentedControl.selectedSegmentIndex.description
 	}
 	
 	func applicationWillEnterForeground(notification : NSNotification) {

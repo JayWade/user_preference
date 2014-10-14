@@ -15,7 +15,6 @@
 @property (nonatomic) NSInteger stepperInteger;
 @property (nonatomic) BOOL switchBool;
 @property (nonatomic) NSString* segmentString;
-@property (nonatomic) NSString *segmentKeyString;
 
 - (instancetype)initWithDefaults:(NSUserDefaults *)defaults;
 - (void)saveDataToUserDefaults;

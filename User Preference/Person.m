@@ -39,7 +39,7 @@ static NSString *kSegmentColorKey = @"IADSegmentColor";
     [self.userDefaults setFloat:self.numberFloat forKey:kPassCodeKey];
     [self.userDefaults setInteger:self.stepperInteger forKey:kUserStepperKey];
     [self.userDefaults setBool:self.switchBool forKey:kUserSwitchKey];
-	[self.userDefaults setObject:self.segmentKeyString forKey:kSegmentColorKey];
+	[self.userDefaults setObject:self.segmentString forKey:kSegmentColorKey];
 }
 
 - (void)loadDataFromUserDefaults
@@ -49,6 +49,7 @@ static NSString *kSegmentColorKey = @"IADSegmentColor";
     self.stepperInteger = [self.userDefaults integerForKey:kUserStepperKey];
     self.switchBool = [self.userDefaults boolForKey:kUserSwitchKey];
 	self.segmentString = [self.userDefaults stringForKey:kSegmentColorKey];
+	NSLog(@"name: %@", self.nameString);
     NSLog(@"key: %@", self.segmentString);
 }
 
