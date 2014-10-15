@@ -86,6 +86,8 @@ class ViewController: UIViewController {
       stepper.tintColor = color
       viewSwitch.tintColor = color
       viewSwitch.onTintColor = color
+      nameText.textColor = color
+      numberTextField.textColor = color
    }
 
 	func displayModelData() {

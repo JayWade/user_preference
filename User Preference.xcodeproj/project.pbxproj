@@ -15,7 +15,7 @@
 		A457582D19E6089A000380F9 /* User_PreferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457582C19E6089A000380F9 /* User_PreferenceTests.swift */; };
 		A457583719E609D1000380F9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A457583619E609D1000380F9 /* Settings.bundle */; };
 		A457583A19E6139A000380F9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A457583919E6139A000380F9 /* Person.m */; };
-		C21ADC5719EED763002841C4 /* Shades.plist in Resources */ = {isa = PBXBuildFile; fileRef = C21ADC5619EED763002841C4 /* Shades.plist */; };
+		C21ADC5719EED763002841C4 /* ChildPane.plist in Resources */ = {isa = PBXBuildFile; fileRef = C21ADC5619EED763002841C4 /* ChildPane.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 		A457583819E61399000380F9 /* User Preference-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User Preference-Bridging-Header.h"; sourceTree = "<group>"; };
 		A457583919E6139A000380F9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		A457583B19E613AC000380F9 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		C21ADC5619EED763002841C4 /* Shades.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Shades.plist; sourceTree = "<group>"; };
+		C21ADC5619EED763002841C4 /* ChildPane.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChildPane.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 				A457581F19E6089A000380F9 /* LaunchScreen.xib */,
 				A457581419E6089A000380F9 /* Supporting Files */,
 				A457583819E61399000380F9 /* User Preference-Bridging-Header.h */,
-				C21ADC5619EED763002841C4 /* Shades.plist */,
+				C21ADC5619EED763002841C4 /* ChildPane.plist */,
 			);
 			path = "User Preference";
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C21ADC5719EED763002841C4 /* Shades.plist in Resources */,
+				C21ADC5719EED763002841C4 /* ChildPane.plist in Resources */,
 				A457583719E609D1000380F9 /* Settings.bundle in Resources */,
 				A457581C19E6089A000380F9 /* Main.storyboard in Resources */,
 				A457582119E6089A000380F9 /* LaunchScreen.xib in Resources */,
