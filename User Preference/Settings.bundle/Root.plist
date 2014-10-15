@@ -47,6 +47,14 @@
 			<string>PSTextFieldSpecifier</string>
 		</dict>
 		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>Child Pane Example</string>
+			<key>File</key>
+			<string>ChildPane</string>
+		</dict>
+		<dict>
 			<key>DefaultValue</key>
 			<true/>
 			<key>Key</key>
