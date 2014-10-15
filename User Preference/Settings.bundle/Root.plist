@@ -100,6 +100,16 @@
 				<string>yellow</string>
 			</array>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>User Preference Settings</string>
+			<key>Key</key>
+			<string>IADTitleString</string>
+			<key>DefaultValue</key>
+			<string>User Preference Settings</string>
+		</dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>

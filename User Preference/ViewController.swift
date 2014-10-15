@@ -31,20 +31,32 @@ class ViewController: UIViewController {
 		notificationCenter.addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: app)
 		notificationCenter.addObserver(self, selector: "applicationWillResignActive:", name: UIApplicationWillResignActiveNotification, object: app)
 		notificationCenter.addObserver(self, selector: "applicationWillTerminate:", name: UIApplicationWillTerminateNotification, object: app)
+		notificationCenter.addObserver(self, selector: "colorSetAlert:", name: "colorSetNotification", object: nil)
         
-        segmentedControl.addTarget(self, action: "setColorKey", forControlEvents: .ValueChanged)
+        segmentedControl.addTarget(self, action: "setColorKey:", forControlEvents: .ValueChanged)
 		
 		person.loadDataFromUserDefaults()
-		
+	}
+	
+	override func viewDidAppear(animated: Bool) {
 		displayModelData()
+		setColorKey(0)
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+	
+	func colorSetAlert(notification:NSNotification) {
+		let actionSheetController: UIAlertController = UIAlertController(title: "Color Set", message: "Color has been set as \(person.segmentString)", preferredStyle: .Alert)
+		let ok = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in })
+		actionSheetController.addAction(ok)
+		presentViewController(actionSheetController, animated: true, completion: nil)
+	}
     
-	func setColorKey() {
+	func setColorKey(value : Int) {
+		println("fromSegment: ", value)
 		progressView.setProgress(100, animated: false)
 		switch (segmentedControl.selectedSegmentIndex) {
 		case 0:
@@ -68,6 +80,9 @@ class ViewController: UIViewController {
 			progressView.progressTintColor = UIColor.redColor()
 			break
 		}
+		if (value != 0) {
+			notificationCenter.postNotificationName("colorSetNotification", object : nil)
+		}
     }
 
 	func displayModelData() {
@@ -89,15 +104,15 @@ class ViewController: UIViewController {
         default:
             segmentedControl.selectedSegmentIndex = 0
         }
-		setColorKey()
 	}
 	
 	func updateModelData() {
+		println("updateModelData")
 		person.nameString = nameText.text
 		person.numberFloat = (numberTextField.text as NSString).floatValue
 		person.stepperInteger = Int(stepper.stepValue)
 		person.switchBool = viewSwitch.on
-		setColorKey()
+		setColorKey(1)
 	}
 	
 	func applicationWillEnterForeground(notification : NSNotification) {
