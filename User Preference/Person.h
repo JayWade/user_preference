@@ -14,7 +14,7 @@
 @property (nonatomic) float numberFloat;
 @property (nonatomic) NSInteger stepperInteger;
 @property (nonatomic) BOOL switchBool;
-@property (nonatomic) NSString* segmentString;
+@property (nonatomic) NSString *segmentString;
 
 - (instancetype)initWithDefaults:(NSUserDefaults *)defaults;
 - (void)saveDataToUserDefaults;

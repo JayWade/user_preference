@@ -5,6 +5,16 @@
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>User Preference Settings</string>
+			<key>Key</key>
+			<string>IADTitleString</string>
+			<key>DefaultValue</key>
+			<string>User Preference Settings</string>
+		</dict>
+		<dict>
 			<key>Title</key>
 			<string>User Info</string>
 			<key>Type</key>
@@ -107,16 +117,6 @@
 				<string>orange</string>
 				<string>yellow</string>
 			</array>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
-			<key>Title</key>
-			<string>User Preference Settings</string>
-			<key>Key</key>
-			<string>IADTitleString</string>
-			<key>DefaultValue</key>
-			<string>User Preference Settings</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>

@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
+		let defaultValues = ["IADSegmentColor" : "red", "IADStepperInteger" : "1"]
+		NSUserDefaults.standardUserDefaults().registerDefaults(defaultValues)
 		return true
 	}
 

@@ -15,6 +15,7 @@
 		A457582D19E6089A000380F9 /* User_PreferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457582C19E6089A000380F9 /* User_PreferenceTests.swift */; };
 		A457583719E609D1000380F9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A457583619E609D1000380F9 /* Settings.bundle */; };
 		A457583A19E6139A000380F9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A457583919E6139A000380F9 /* Person.m */; };
+		A4C8279019EF45A700E7C080 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8278F19EF45A700E7C080 /* CircleView.swift */; };
 		C21ADC5719EED763002841C4 /* ChildPane.plist in Resources */ = {isa = PBXBuildFile; fileRef = C21ADC5619EED763002841C4 /* ChildPane.plist */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		A457583819E61399000380F9 /* User Preference-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User Preference-Bridging-Header.h"; sourceTree = "<group>"; };
 		A457583919E6139A000380F9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		A457583B19E613AC000380F9 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		A4C8278F19EF45A700E7C080 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		C21ADC5619EED763002841C4 /* ChildPane.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChildPane.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,10 +87,11 @@
 		A457581319E6089A000380F9 /* User Preference */ = {
 			isa = PBXGroup;
 			children = (
+				A457583619E609D1000380F9 /* Settings.bundle */,
 				A457583B19E613AC000380F9 /* Person.h */,
 				A457583919E6139A000380F9 /* Person.m */,
-				A457583619E609D1000380F9 /* Settings.bundle */,
 				A457581619E6089A000380F9 /* AppDelegate.swift */,
+				A4C8278F19EF45A700E7C080 /* CircleView.swift */,
 				A457581819E6089A000380F9 /* ViewController.swift */,
 				A457581A19E6089A000380F9 /* Main.storyboard */,
 				A457581D19E6089A000380F9 /* Images.xcassets */,
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C8279019EF45A700E7C080 /* CircleView.swift in Sources */,
 				A457583A19E6139A000380F9 /* Person.m in Sources */,
 				A457581919E6089A000380F9 /* ViewController.swift in Sources */,
 				A457581719E6089A000380F9 /* AppDelegate.swift in Sources */,
